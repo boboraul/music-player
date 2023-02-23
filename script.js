@@ -80,5 +80,7 @@ function prevSong() {
 loadSong(songs[songIndex]);
 
 // Event Listeners
+
+// Prev/Next Song
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
