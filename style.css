@@ -58,7 +58,7 @@ h3 {
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
-  margin: 40px 20px;
+  margin: 20px 20px;
   height: 4px;
   width: 90%;
 }
@@ -89,11 +89,10 @@ h3 {
 
 .fas {
   font-size: 30px;
-  color: rgb(129, 129, 129);
+  color: rgb(0 117 255);
   margin-right: 30px;
   cursor: pointer;
   user-select: none;
-
 }
 
 .fas:hover {
@@ -104,6 +103,11 @@ h3 {
   font-size: 40px;
   position: relative;
   top: 3px;
+}
+
+.volume-container { 
+  margin-bottom: 20px;
+  width: 100px;
 }
 
 /* Media Query: iPhone (Vertical) */
