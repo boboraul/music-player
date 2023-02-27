@@ -1,3 +1,4 @@
+
 const music = document.querySelector('audio');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
@@ -9,6 +10,8 @@ const progressContainer = document.getElementById('progress-container');
 const progress = document.getElementById('progress');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
+const volumeContainer = document.getElementById('volume-container');
+const currentVolume = document.getElementById('volume-slider-con');
 
 // Music
 const songs = [
@@ -122,6 +125,16 @@ function setProgressBar (e) {
     music.currentTime = (clickX / width) * duration;
 }
 
+function setVolumeBar (e) {
+    const vHeight= this.clientHeight;
+    console.log(vHeight);
+    const vClickY = e.offsetY;
+    const volume = music.volume;
+    music.volume = (vClickY / vHeight);
+    volumeBarHeight = music.volume * 100;
+    currentVolume.style.height = `${volumeBarHeight}%`;  
+}
+
 // Event Listeners
 
 // Prev/Next Song
@@ -130,3 +143,4 @@ nextBtn.addEventListener('click', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 music.addEventListener('ended', nextSong);
 progressContainer.addEventListener('click', setProgressBar);
+volumeContainer.addEventListener('click', setVolumeBar);
