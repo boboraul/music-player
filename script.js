@@ -11,7 +11,6 @@ const progress = document.getElementById('progress');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 const volumeContainer = document.getElementById('volume-container');
-const currentVolume = document.getElementById('volume-slider-con');
 
 // Music
 const songs = [
@@ -126,13 +125,8 @@ function setProgressBar (e) {
 }
 
 function setVolumeBar (e) {
-    const vHeight= this.clientHeight;
-    console.log(vHeight);
-    const vClickY = e.offsetY;
-    const volume = music.volume;
-    music.volume = (vClickY / vHeight);
-    volumeBarHeight = music.volume * 100;
-    currentVolume.style.height = `${volumeBarHeight}%`;  
+    var currentRange = document.getElementById("volume-range").value;
+    music.volume = (currentRange / 100);
 }
 
 // Event Listeners
