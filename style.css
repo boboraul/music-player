@@ -59,7 +59,7 @@ h3 {
   border-radius: 5px;
   cursor: pointer;
   margin: 20px 20px;
-  height: 4px;
+  height: 6px;
   width: 90%;
 }
 
@@ -106,8 +106,7 @@ h3 {
 }
 
 .volume-container { 
-  margin-bottom: 20px;
-  width: 100px;
+  margin: 20px 20px;
 }
 
 /* Media Query: iPhone (Vertical) */
